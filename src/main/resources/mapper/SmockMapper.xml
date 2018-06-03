@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.SmokeMapper">
+  <insert id="insert" parameterType="po.smoke" useGeneratedKeys="true" keyProperty="smockid">
+    insert into smoke (smockid, nodeid, value,
+    date)
+    values (#{smockid,jdbcType=INTEGER}, #{nodeid,jdbcType=INTEGER}, #{value,jdbcType=INTEGER},
+    #{date,jdbcType=TIMESTAMP})
+  </insert>
+</mapper>

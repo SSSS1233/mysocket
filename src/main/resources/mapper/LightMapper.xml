@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.LightMapper">
+  <insert id="insert" parameterType="po.Light" useGeneratedKeys="true" keyProperty="lightid">
+    insert into light (lightid, nodeid, value,
+    date)
+    values (null, #{nodeid,jdbcType=INTEGER}, #{value,jdbcType=INTEGER},
+    #{date,jdbcType=TIMESTAMP})
+  </insert>
+</mapper>
